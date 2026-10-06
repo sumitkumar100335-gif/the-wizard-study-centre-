@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Wizard Study Center</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#071952,#088395);
+    color:white;
+    padding:18px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 18px;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:white;
+    color:#071952;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 7px;
+    font-weight:bold;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+}
+
+.primary{
+    background:#e63946;
+    color:white;
+}
+
+.hero{
+    padding:65px 0;
+    background:linear-gradient(135deg,#e8f9ff,#fff);
+}
+
+.hero-grid,
+.two,
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:35px;
+    align-items:center;
+}
+
+.eyebrow,
+.tag{
+    color:#e63946;
+    font-weight:bold;
+}
+
+h2{
+    font-size:44px;
+    color:#071952;
+    line-height:1.15;
+    margin:12px 0;
+}
+
+h3{
+    font-size:30px;
+    color:#071952;
+    margin:10px 0 20px;
+}
+
+.lead{
+    font-size:18px;
+    margin-bottom:22px;
+}
+
+.hero-card,
+.card,
+.feature,
+.panel,
+.contact-form{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px #ccd4dd;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:20px;
+}
+
+.stat{
+    background:#eef8fb;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    color:#071952;
+    font-size:22px;
+}
+
+section{
+    padding:60px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    text-align:center;
+}
+
+.icon{
+    font-size:38px;
+}
+
+.card h4,
+.feature h4{
+    color:#088395;
+    font-size:20px;
+    margin:10px 0;
+}
+
+.center{
+    text-align:center;
+}
+
+.heading{
+    text-align:center;
+}
+
+.features{
+    background:#071952;
+    color:white;
+}
+
+.features h3,
+.features .tag{
+    color:white;
+}
+
+.feature{
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:32px;
+}
+
+.cta{
+    background:#e8f9ff;
+}
+
+.cta-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.contact-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.contact-list li{
+    margin:10px 0;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+input,
+select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-top:6px;
+    font-size:15px;
+}
+
+.wide{
+    width:100%;
+}
+
+footer{
+    background:#071952;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        flex-direction:column;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        font-size:13px;
+        margin:3px;
+    }
+
+    .nav .btn{
+        display:none;
+    }
+
+    .hero-grid,
+    .two,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    h2{
+        font-size:34px;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<div class="brand">
+
+<div class="logo">W</div>
+
+<div>
+<strong>The Wizard Study Center</strong>
+<br>
+<small>Run by Sonu Sir</small>
+</div>
+
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#features">Features</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn primary" href="#contact">
+Enroll Now
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<p class="eyebrow">
+Best Coaching Classes in Muzaffarpur
+</p>
+
+<h2>
+Smart Learning for a Strong Future
+</h2>
+
+<p class="lead">
+The Wizard Study Center provides quality education
+for BSEB, CBSE, ICSE, ITI, Navodaya, Polytechnic,
+Sainik School and Punjab SLIET preparation.
+</p>
+
+<a class="btn primary" href="#courses">
+Explore Courses
+</a>
+
+<a class="btn" href="#contact">
+Talk to Us
+</a>
+
+</div>
+
+
+<div class="hero-card">
+
+<p class="tag">
+Run by Sonu Sir
+</p>
+
+<h3>
+Academic Excellence That Leads to Success
+</h3>
+
+<div class="stats">
+
+<div class="stat">
+<strong>8+</strong>
+Courses
+</div>
+
+<div class="stat">
+<strong>Weekly</strong>
+Tests
+</div>
+
+<div class="stat">
+<strong>Monthly</strong>
+Tests
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+Guidance
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="container two">
+
+<div>
+
+<p class="tag">
+About Us
+</p>
+
+<h3>
+Shaping Bright Futures Through Quality Education
+</h3>
+
+<p>
+The Wizard Study Center is dedicated to providing
+quality education and proper guidance to students.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="panel">
+
+<h4>Our Mission</h4>
+
+<p>
+To provide quality education and strong preparation
+for every student.
+</p>
+
+</div>
+
+<br>
+
+<div class="panel">
+
+<h4>Our Vision</h4>
+
+<p>
+To create confident and successful students.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="courses">
+
+<div class="container">
+
+<p class="tag center">
+Our Courses
+</p>
+
+<h3 class="heading">
+Prepare for the Right Future
+</h3>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📚</div>
+<h4>BSEB</h4>
+<p>Bihar Board academic preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h4>CBSE</h4>
+<p>CBSE syllabus based preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">📖</div>
+<h4>ICSE</h4>
+<p>ICSE academic preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h4>ITI</h4>
+<p>ITI entrance preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏫</div>
+<h4>Navodaya</h4>
+<p>Navodaya entrance preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h4>Polytechnic</h4>
+<p>Polytechnic entrance preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h4>Sainik School</h4>
+<p>Sainik School entrance preparation.</p>
+</div>
+
+<div class="card">
+<div class="icon">📘</div>
+<h4>Punjab SLIET</h4>
+<p>SLIET entrance preparation.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="features" id="features">
+
+<div class="container">
+
+<p class="tag center">
+Why Choose Us
+</p>
+
+<h3 class="heading">
+Learning Support That Makes a Difference
+</h3>
+
+<div class="grid">
+
+<div class="feature">
+<span class="feature-icon">📝</span>
+<h4>Weekly Tests</h4>
+<p>Regular tests for better preparation.</p>
+</div>
+
+<div class="feature">
+<span class="feature-icon">📊</span>
+<h4>Monthly Tests</h4>
+<p>Monthly performance evaluation.</p>
+</div>
+
+<div class="feature">
+<span class="feature-icon">📚</span>
+<h4>Extra Classes</h4>
+<p>Extra classes for difficult topics.</p>
+</div>
+
+<div class="feature">
+<span class="feature-icon">👨‍👩‍👦</span>
+<h4>PTM</h4>
+<p>Parent Teacher Meeting.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<div class="container cta-box">
+
+<div>
+
+<p class="tag">
+Admissions Open
+</p>
+
+<h3>
+Start Your Academic Journey
+</h3>
+
+</div>
+
+<a href="#contact" class="btn primary">
+Book Counseling
+</a>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<p class="tag">
+Contact
+</p>
+
+<h3>
+Connect With Us
+</h3>
+
+<ul class="contact-list">
+
+<li>
+<strong>Director:</strong> Sonu Sir
+</li>
+
+<li>
+<strong>Phone:</strong> +91 76318 23485
+</li>
+
+<li>
+<strong>Address:</strong>
+Murarpur Road, Ward No 7,
+Moti Pur, Muzaffarpur
+</li>
+
+</ul>
+
+<a class="btn primary"
+href="tel:+917631823485">
+📞 Call Now
+</a>
+
+</div>
+
+
+<form class="contact-form"
+onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+
+<label>
+Your Name
+<input type="text" required placeholder="Enter your name">
+</label>
+
+<label>
+Mobile Number
+<input type="tel" required placeholder="Enter your mobile number">
+</label>
+
+<label>
+Course
+
+<select required>
+
+<option value="">Select Course</option>
+
+<option>BSEB</option>
+<option>CBSE</option>
+<option>ICSE</option>
+<option>ITI</option>
+<option>Navodaya</option>
+<option>Polytechnic</option>
+<option>Sainik School</option>
+<option>Punjab SLIET</option>
+
+</select>
+
+</label>
+
+<button class="btn primary wide" type="submit">
+Submit
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 The Wizard Study Center
+<br>
+Learn Today • Lead Tomorrow 🚀
+
+</footer>
+
+</body>
+</html>
